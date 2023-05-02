@@ -25,6 +25,11 @@ const mensajeSchema = new Mongoose.Schema({
     required: true,
   },
 });
+const adminSchema = new Mongoose.Schema({
+  datos:String
+});
 const CafeMenuModel = Mongoose.model("cafemenu", cafeMenuSchema);
 const MensajeModel = Mongoose.model("mensajes", mensajeSchema);
-module.exports = { CafeMenuModel, MensajeModel };
+const AdminEntrar = Mongoose.model("adminpart", adminSchema);
+
+module.exports = { CafeMenuModel, MensajeModel, AdminEntrar};
