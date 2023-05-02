@@ -2,8 +2,11 @@ const express = require("express");
 const {  MenuLista } = require("../services/menuLista");
 const { CafeMenuModel } = require("../database/schema");
 const { acciones, responseLista } = require("../requestConfig/cafeMenuRequest");
+const { validatorHandler } = require("../middlewares/joiHandle");
+const { agregarLista, editarLista } = require("../schema/comidaSchema");
 const servicio = new MenuLista(CafeMenuModel);
 const routerMenuCafe = express.Router();
+const property = "body";
 
 routerMenuCafe.get("/", async (req, res, next)=>{
    await responseLista(res, next, null, 200, acciones.leer, servicio);
@@ -17,10 +20,10 @@ routerMenuCafe.get("/categoria/:body", async(req, res, next)=>{
     await responseLista(res, next, body, 200, acciones.leerGrupo, servicio);
 });
 
-routerMenuCafe.post("/", async (req, res, next)=>{
+routerMenuCafe.post("/",validatorHandler(agregarLista, property) ,async (req, res, next)=>{
     await responseLista(res, next, req.body, 201, acciones.agregar, servicio);
 });
-routerMenuCafe.patch("/:num", async (req, res, next)=>{
+routerMenuCafe.patch("/:num", validatorHandler(editarLista, property),async (req, res, next)=>{
     const {num} = req.params;
     const request = {
         num,

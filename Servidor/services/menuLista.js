@@ -13,11 +13,11 @@ class MenuLista {
   }
   async leerUno(num) {
     try {
-      const datos = await this.Model.findById(num);
+      const datos = await this.Model.findOne({_id:num});
       if (datos.length === 0) {
         throw "No se esncontro ese elemento";
       }
-      return datos;
+      return [datos];
     } catch (error) {
       throw boom.notFound(error);
     }

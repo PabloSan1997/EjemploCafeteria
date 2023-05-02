@@ -20,5 +20,19 @@
     "@hapi/boom": "^10.0.1",
     "cors": "^2.8.5",
     "joi": "^17.9.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PabloSan1997/EjemploCafeteria.git"
+  },
+  "keywords": [
+    "cafeteria",
+    "nodejs",
+    "javascript",
+    "express"
+  ],
+  "bugs": {
+    "url": "https://github.com/PabloSan1997/EjemploCafeteria/issues"
+  },
+  "homepage": "https://github.com/PabloSan1997/EjemploCafeteria#readme"
 }
