@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --borderColor:#020051;
+    --colorFondo1:#FFF2F2;
+    --letrasColor:rgb(2, 2, 32);
+    --fondoEntradas:#DFE2FF;
+}
+body{
+    background: rgb(235, 229, 229);
+}

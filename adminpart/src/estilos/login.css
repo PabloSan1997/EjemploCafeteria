@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Inder&family=Inika:wght@700&display=swap');
+.formulario{
+    width: 550px;
+    height: 300px;
+    border: 5px solid var(--borderColor);
+    margin:10% auto;
+    border-radius: 30px;
+    background: var(--colorFondo1);
+    display: flex;
+    flex-direction: column;
+}
+.formulario h2{
+    width: 100%;
+    text-align: center;
+    background: var(--borderColor);
+    height: fit-content;
+    color: #C7C6F3;
+    font-size: 2.5rem;
+    padding: 2px 0;
+    font-family: 'Inika', serif;
+    border-radius: 20px 20px 0 0;
+}
+.formulario .fila{
+    width: 80%;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    margin:auto;
+    height: fit-content;
+}
+.formulario .fila .entrada{
+    padding: 5px 2px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid var(--borderColor);
+    background: var( --fondoEntradas);
+    outline: none;
+    font-size: 1.2rem;
+}
+.formulario .fila label{
+    font-family: 'Inder', sans-serif;
+    font-size: 1.2rem;
+}
+.formulario .boton{
+    background: white;
+    border: 2px solid var(--borderColor);
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: 'Inder', sans-serif;
+    padding: 5px 40px;
+    width: fit-content;
+    margin: auto;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.247);
+}
+.formulario .boton:hover{
+    cursor: pointer;
+    background: rgb(226, 226, 226);
+}
+.formulario .boton:active{
+    box-shadow:inset 0 2px 2px rgba(0, 0, 0, 0.247);
+}

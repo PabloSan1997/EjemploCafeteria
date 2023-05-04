@@ -1,6 +1,6 @@
 import React from 'react'
 import { useContextoAdmin } from '../contextos';
-
+import "../estilos/login.css";
 export function Login() {
     const {solicitud} = useContextoAdmin();
     const [textos, setTextos] = React.useState({

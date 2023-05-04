@@ -4,7 +4,7 @@ import { Admin } from './conteiners/Admin';
 import { Login } from './conteiners/Login';
 import { useContextoAdmin } from './contextos';
 import Mensajes from './conteiners/Mensajes';
-
+import "./estilos/app.css";
 function App() {
   const {permiso} = useContextoAdmin();
 
