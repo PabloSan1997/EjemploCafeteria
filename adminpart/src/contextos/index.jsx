@@ -3,6 +3,8 @@ import { useEntrar } from '../API/permiso';
 import { useLeerDatos } from '../API/datos';
 import { useMandarCafe } from '../API/editar';
 import { useAgregarCafe } from '../API/agregarCafe';
+import { useLeerMensaje } from '../API/leerMensajes';
+import { useEliminarMensaje } from '../API/eliminarMensaje';
 
 
 const Contexto = React.createContext();
@@ -12,6 +14,8 @@ export function ProvedorContexto({ children }) {
     const { cafe } = useLeerDatos();
     const {editarCafe} = useMandarCafe();
     const {agregarCafe} = useAgregarCafe();
+    const {mensajes} = useLeerMensaje();
+    const {borrarUno} = useEliminarMensaje();
     return (
         <Contexto.Provider
             value={{
@@ -19,7 +23,9 @@ export function ProvedorContexto({ children }) {
                 permiso,
                 cafe,
                 editarCafe,
-                agregarCafe
+                agregarCafe,
+                mensajes,
+                borrarUno
             }}
         >
             {children}
