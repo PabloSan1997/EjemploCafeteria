@@ -6,30 +6,31 @@ interface datos {
     bebidas: CafeDatos[],
     desayunos: CafeDatos[]
 }
-
+interface seccion {
+    dato: CafeDatos[],
+    titulo:string
+}
 export function CajaMenu({ bebidas, desayunos }: datos) {
     return (
         <>
-            <div className="fila">
-                <h2>Nuestras bebidas</h2>
-                <div className="secciones">
-                    {bebidas.map(ele => (
-                        <Caja key={ele._id} prop={ele} />
-                    ))}
-                </div>
-            </div>
-            <div className="fila">
-                <h2>Nuestro desayunos</h2>
-                <div className="secciones">
-                    {desayunos.map(ele => (
-                        <Caja key={ele._id} prop={ele} />
-                    ))}
-                </div>
-            </div>
+            <Seccion dato={bebidas} titulo='Nuestrars Bebidas'/>
+            <Seccion dato={desayunos} titulo='Nuestros desayunos'/>
         </>
     );
 }
 
+function Seccion({ dato, titulo }: seccion) {
+    return (
+        <div className="fila">
+            <h2>{titulo}</h2>
+            <div className="secciones">
+                {dato.map(ele => (
+                    <Caja key={ele._id} prop={ele} />
+                ))}
+            </div>
+        </div>
+    )
+}
 
 function Caja({ prop }: propiedades): JSX.Element {
     const { name, imagen, price, description } = prop;

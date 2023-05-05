@@ -18,7 +18,7 @@ export function useLeerCafe() {
             (async ()=>{
                 try {
                     const datos = await axios.get("https://servercafeteria.onrender.com/api/v1/menuCafe/");
-                    setCafe(datos.data);
+                    setCafe(await datos.data);
                 } catch (error) {
                     console.log("error al descargas datos");
                     setCafe([]);

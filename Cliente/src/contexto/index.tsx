@@ -1,5 +1,7 @@
 import React from 'react';
 import { useLeerCafe, CafeDatos } from '../Api/leerCafe';
+import { useLeerMensajes, Mensajes } from '../Api/leerMensajes';
+import { Agregar, useAgregarMensaje } from '../Api/agregarMensaje';
 
 
 const Contexto = React.createContext({});
@@ -9,12 +11,15 @@ type props={
 
 export function Provedor({children}:props) {
     const {cafe} = useLeerCafe();
-    
+    const {mensaje} = useLeerMensajes();
+    const {generarMensaje} = useAgregarMensaje();
     return (
         <Contexto.Provider
             value={
                 {
-                    cafe
+                    cafe,
+                    mensaje,
+                    generarMensaje
                 }
             }
         >
@@ -22,10 +27,13 @@ export function Provedor({children}:props) {
         </Contexto.Provider>
     );
 }
+interface generar {
+    ({name, mail, mensaje}:Agregar):VoidFunction
+}
 interface valores {
-    cafe:CafeDatos[]
+    cafe:CafeDatos[],
+    mensaje:Mensajes[],
+    generarMensaje:generar
 }
-export const useContexto = () =>{
-    const auth = React.useContext(Contexto) as valores;
-    return auth;
-}
+export const useContexto = () => React.useContext(Contexto) as valores;
+
