@@ -3,6 +3,7 @@ import { useContextoAdmin } from '../contextos'
 
 export  function CajaMensajes({id, name, mail, mensaje}) {
     const {borrarUno} = useContextoAdmin();
+    const lugar = "mensajes";
   return (
     <div className="sexxion">
         <div className="fila">
@@ -18,7 +19,7 @@ export  function CajaMensajes({id, name, mail, mensaje}) {
             <div className="texto">{mensaje}</div>
         </div>
         <div className="area-boton">
-            <button className="boton" onClick={()=>borrarUno(id)}>X</button>
+            <button className="boton" onClick={()=>borrarUno(lugar,id)}>X</button>
         </div>
     </div>
   )

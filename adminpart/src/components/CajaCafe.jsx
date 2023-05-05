@@ -4,7 +4,8 @@ import { useContextoAdmin } from '../contextos';
 export function CajaCafe({ name, price, store, description, imagen, type, id }) {
     const [editar, setEditar] = React.useState(false);
     const [escribir, setEsxribir] = React.useState({ name, price, store, description, imagen, type });
-    const {editarCafe}=useContextoAdmin();
+    const {editarCafe, borrarUno}=useContextoAdmin();
+    const lugar = "menuCafe";
     const evento =(e)=>{
       e.preventDefault();
       editarCafe(id, escribir);
@@ -32,7 +33,7 @@ export function CajaCafe({ name, price, store, description, imagen, type, id }) 
         <div className="caja">
           <div className="area-botones">
             <button className="boton" onClick={() => setEditar(true)}>Editar</button>
-            <button className="boton">X</button>
+            <button className="boton" onClick={()=>borrarUno(lugar, id)}>X</button>
           </div>
           <img src={imagen} alt={name} />
           <h2>{name}</h2>
