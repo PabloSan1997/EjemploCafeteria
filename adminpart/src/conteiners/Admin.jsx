@@ -4,7 +4,7 @@ import { CajaCafe } from '../components/CajaCafe';
 import AgregarCafe from '../components/AgregarCafe';
 import { Header } from '../components/Header';
 import { cambiarPagina } from '../storage';
-
+import "../estilos/admin.css";
 export function Admin() {
   const { cafe } = useContextoAdmin();
   const paginaActual = "/admin" ;

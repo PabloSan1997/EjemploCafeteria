@@ -3,6 +3,7 @@ import { Header } from '../components/Header'
 import { useContextoAdmin } from '../contextos'
 import { CajaMensajes } from '../components/CajaMensajes';
 import { cambiarPagina } from '../storage';
+import "../estilos/mensajes.css";
 
 export default function Mensajes() {
     const {mensajes}=useContextoAdmin();

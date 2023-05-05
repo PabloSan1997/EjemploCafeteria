@@ -1,6 +1,6 @@
 import React from 'react'
 import { useContextoAdmin } from '../contextos';
-
+import "../estilos/agregarCafe.css";
 export default function AgregarCafe() {
     const [escribir, setEsxribir] = React.useState({ name: "", price: "", store: true, description: "", imagen: "", type: "" });
     const { agregarCafe} = useContextoAdmin();
@@ -64,7 +64,7 @@ export default function AgregarCafe() {
                     onChange={cambiarDescripcion}
                     id='desc' />
             </div>
-            <div className="fila">
+            <div className="fila checado">
                 <label htmlFor="checar">En Store: {escribir.store ? "Si" : "No"}</label>
                 <input
                     type="checkbox"

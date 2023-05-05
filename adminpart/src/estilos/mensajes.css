@@ -1,0 +1,38 @@
+.area-mensajes{
+    width: 95%;
+    margin:20px auto;
+    border: 1px solid var(--borderColor);
+    box-shadow: 0 0  5px black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.area-mensajes .sexxion{
+    width: 98%;
+    margin: 10px auto;
+    display: flex;
+    background: rgb(206, 206, 214);
+    padding: 5px;
+    border-radius:5px ;
+}
+.area-mensajes .sexxion .area .texto{
+    font-family: 'Inder', sans-serif;
+}
+.area-mensajes .sexxion .area .texto:nth-child(1){
+    font-size: 1.7rem;
+    margin: 2px auto 5px 1%;
+}
+.area-mensajes .sexxion .area .texto:nth-child(2){
+    font-size: 1rem;
+    margin: 0 auto 0 1%;
+}
+.area-mensajes .sexxion .area .texto:nth-child(3){
+    font-size: 1rem;
+    margin: 5px auto 0 1%;
+    max-width: 90%;
+}
+.area-mensajes .sexxion .area{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}

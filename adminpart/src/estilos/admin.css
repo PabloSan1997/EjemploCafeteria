@@ -1,0 +1,75 @@
+.area-porductos{
+    width: 98%;
+    margin: auto;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.area-porductos .boton{
+    font-size: .8rem;
+    padding: 5px;
+}
+.area-porductos .caja{
+    width: 30%;
+    margin: auto auto 10px auto;
+    border: 2px solid var(--borderColor);
+    border-radius: 10px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    background: var(--fondaCajas);
+}
+.area-porductos .caja .texto{
+    margin:5px auto 0 40%;
+    font-family: arial;
+}
+.area-porductos .caja h2.texto{
+    margin-top: 5%;
+    font-family: 'Inder', sans-serif;
+}
+.area-porductos .caja .area-botones{
+    width: 100%;
+    margin: 1% auto 0 auto;
+    display: flex;
+}
+.area-porductos .caja img{
+    max-width: 90%;
+    max-height: 50%;
+    margin: 2% auto 0 auto;
+}
+.area-porductos .caja .area-botones .boton:nth-child(1){
+    margin: auto 2px auto auto;
+}
+.area-porductos .caja .area-botones .boton:nth-child(2){
+    margin: auto 1% auto 0;
+}
+.area-porductos .caja .fila{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 10%;
+    margin: 20px auto 0 auto;
+}
+.area-porductos .caja .fila label{
+    margin-bottom: 2px;
+}
+.area-porductos .caja .fila.checar{
+    height: 5%;
+    flex-direction: row;
+}
+.area-porductos .caja .fila.checar input{
+    margin: auto 60% auto auto;
+}
+.area-porductos .caja .fila.checar label{
+    margin: auto;
+}
+.area-porductos .caja .fila label{
+    font-family: arial;
+}
+.area-porductos .caja .fila .entrada{
+    height: 50%;
+    border-radius: 5px;
+    border: 1px solid var(--borderColor);
+    background: var(--fondoEntradas);
+    padding: 5px 2px;
+}

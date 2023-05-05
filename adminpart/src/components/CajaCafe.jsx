@@ -36,11 +36,11 @@ export function CajaCafe({ name, price, store, description, imagen, type, id }) 
             <button className="boton" onClick={()=>borrarUno(lugar, id)}>X</button>
           </div>
           <img src={imagen} alt={name} />
-          <h2>{name}</h2>
-          <p className='precio'>price: ${price}</p>
-          <p className='store'>en store: {store ? "si" : "no"}</p>
-          <p className='descripcion'>{description}</p>
-          <p className='tipo'>Type: {type}</p>
+          <h2 className='texto'>{name}</h2>
+          <p className='texto precio'>Price: ${price}</p>
+          <p className='texto store'>En store: {store ? "si" : "no"}</p>
+          <p className='texto descripcion'>{description}</p>
+          <p className='texto tipo'>Type: {type}</p>
         </div>
       );
     }
@@ -66,7 +66,7 @@ export function CajaCafe({ name, price, store, description, imagen, type, id }) 
           <label>Descripcion</label>
           <input type="text" className="entrada" value={escribir.description} onChange={cambiarDescripcion}/>
         </div>
-        <div className="fila">
+        <div className="fila checar">
           <label htmlFor="checar">En Store: {escribir.store?"Si":"No"}</label>
          <input type="checkbox" id="checar" checked={escribir.store} onChange={cambiarStore}/>
         </div>
