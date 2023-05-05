@@ -10,7 +10,7 @@ import { useEliminar } from '../API/eliminarElemento';
 const Contexto = React.createContext();
 
 export function ProvedorContexto({ children }) {
-    const { permiso, solicitud } = useEntrar();
+    const { permiso, solicitud, loading } = useEntrar();
     const { cafe } = useLeerDatos();
     const {editarCafe} = useMandarCafe();
     const {agregarCafe} = useAgregarCafe();
@@ -25,7 +25,8 @@ export function ProvedorContexto({ children }) {
                 editarCafe,
                 agregarCafe,
                 mensajes,
-                borrarUno
+                borrarUno,
+                loading
             }}
         >
             {children}

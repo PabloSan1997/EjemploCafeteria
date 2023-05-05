@@ -1,0 +1,19 @@
+.area-cargando{
+    width: 200px;
+    margin:10% auto 0 auto;
+    position: relative;
+}
+.area-cargando img{
+    width: 100%;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.548));
+    position: absolute;
+    animation: girar 0.5s linear infinite ;
+}
+@keyframes girar {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}

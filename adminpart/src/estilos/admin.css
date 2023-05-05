@@ -20,8 +20,9 @@
     background: var(--fondaCajas);
 }
 .area-porductos .caja .texto{
-    margin:5px auto 0 40%;
+    margin:5px auto 0 auto;
     font-family: arial;
+    max-width: 70%;
 }
 .area-porductos .caja h2.texto{
     margin-top: 5%;

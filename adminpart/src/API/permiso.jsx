@@ -9,6 +9,7 @@ export function useEntrar(){
     const usuario = !!cookies.hola?cookies.hola.usuario:"";
     const contra = !!cookies.hola?cookies.hola.contra:"";
     const [escribir, setEscribir]=React.useState({usuario, contra});
+    const [loading, setLoading] =React.useState(false);
     React.useEffect(
         ()=>{(async ()=>{
             try {
@@ -17,9 +18,10 @@ export function useEntrar(){
                     contra:escribir.contra
                 });
                 setPermiso(mandar.data.aceptar);
+                setLoading(true);
             } catch (error) {
                 console.log(error);
-                setPermiso(false);
+                setLoading(true);
             }
         })();}
         ,[generar]);
@@ -28,5 +30,5 @@ export function useEntrar(){
             setCookie("hola", JSON.stringify({usuario, contra}), {maxAge:60*60});
             setGenerar(!generar);
         }
-    return {permiso, solicitud}
+    return {permiso, solicitud, loading}
 }
