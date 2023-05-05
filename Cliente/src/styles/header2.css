@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Dancing+Script:wght@600;700&family=Kanit&family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;1,200&display=swap');
+.cabeza2{
+    width: 100%;
+    height: 100px;
+    background:rgb(44, 19, 2); 
+    display: flex;
+}
+.cabeza2 img{
+    max-width: 50px;
+    margin: auto 0 auto 1%;
+}
+.cabeza2 nav{
+    width: 70%;
+    margin: auto;
+}
+.cabeza2 nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+}
+.cabeza2 nav ul li{
+    width: fit-content;
+    margin: auto;
+}
+.cabeza2 nav ul li .opcion{
+    color: rgb(235, 148, 122);
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.5rem;
+    border: 2px solid rgb(235, 148, 122);
+    padding: 2px 10px;
+    border-radius: 10px;
+}
+.cabeza2 nav ul li .opcion:hover{
+    background: rgba(165, 42, 42, 0.336);
+}
+.cabeza2 nav ul li .opcion.activado{
+    background: rgba(165, 42, 42, 0.336);
+}

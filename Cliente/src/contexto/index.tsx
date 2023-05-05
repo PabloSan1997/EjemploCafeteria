@@ -9,7 +9,7 @@ type props={
 
 export function Provedor({children}:props) {
     const {cafe} = useLeerCafe();
-    console.log(cafe);
+    
     return (
         <Contexto.Provider
             value={

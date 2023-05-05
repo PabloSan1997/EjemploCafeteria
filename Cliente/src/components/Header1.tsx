@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import logo from "../asserts/logo.svg";
 import { Link } from 'react-router-dom';
 import "../styles/header1.css";
@@ -14,10 +14,7 @@ export function Header1():JSX.Element {
       <nav>
         <ul>
           <li>
-            <Link to="/cafes">Cafes</Link>
-          </li>
-          <li>
-            <Link to="/desayunos">Desayunos</Link>
+            <Link to="/cafes">Menu</Link>
           </li>
           <li>
             <Link to="/mensaje">Contactanos</Link>
